@@ -319,10 +319,19 @@
   min-height: 420px;
 }
 
-.lookbook-grid img {
-  height: 180px;
+.lookbook-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
 }
 
+
+.lookbook-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
 .contact-item {
   display: flex;
   align-items: flex-start;
@@ -351,13 +360,17 @@
   }
 
   .lookbook-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 
   .newsletter-actions {
     grid-template-columns: 1fr;
   }
 
+  .lookbook-grid img {
+    height: 140px; 
+  }
   .newsletter-actions .btn {
     width: 100%;
   }
