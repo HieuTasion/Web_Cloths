@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="d-flex gap-2">
               <button class="btn btn-accent flex-grow-1 js-add-to-cart fw-bold" data-id="${product.id}">MUA NGAY</button>
               <a class="btn btn-outline-light" href="./product-detail.html?id=${product.id}">
-                <i class="fa-solid fa-eye"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
               </a>
             </div>
           </div>
@@ -84,14 +84,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const button = event.target.closest(".js-add-to-cart");
 
     if (!button) {
+      // Nếu không phải nút "MUA NGAY"
       // Xử lý click vào card để xem chi tiết
       const card = event.target.closest(".product-card");
-      const viewLink = event.target.closest('a[href*="product-detail.html"]');
+      const viewLink = event.target.closest('a[href*="product-detail.html"]'); // Kiểm tra xem có click vào link chi tiết không
 
-      if (viewLink) return;
+      if (viewLink || event.target.closest('a[href*="buy-now.html"]')) return;
 
       if (card) {
-        const detailLink = card.querySelector('a[href*="product-detail.html"]');
+        const detailLink =
+          card.querySelector('a[href*="buy-now.html"]') ||
+          card.querySelector('a[href*="product-detail.html"]');
         if (detailLink) window.location.href = detailLink.href;
       }
       return;
@@ -118,23 +121,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
       return;
-    }
-
-    window.SportxCartStore.upsertCartItem({
-      id: product.id,
-      name: product.name,
-      price: product.price,
-      image: product.image,
-      quantity: 1,
-    });
-
-    if (window.Swal) {
-      Swal.fire({
-        icon: "success",
-        title: "Đã thêm vào giỏ hàng",
-        text: `${product.name} đã được thêm vào giỏ của bạn.`,
-        confirmButtonColor: "#00b7ff",
-      });
     }
   });
 });

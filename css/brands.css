@@ -40,3 +40,16 @@
   color: #1a1a1a ;
   border: 1px solid #dee2e6 ;
 }
+
+
+.product-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(4, 8, 18, 0.86);
+  color: #fff;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(0, 230, 118, 0.25);
+}

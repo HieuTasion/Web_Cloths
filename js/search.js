@@ -14,7 +14,6 @@
         return;
       }
 
-      // Lọc sản phẩm theo tên hoặc danh mục
       const matches = catalog
         .filter((product) => {
           return (

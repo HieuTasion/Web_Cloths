@@ -146,11 +146,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
 
                 <div class="d-flex gap-2">
-                  <button class="btn btn-accent flex-grow-1 js-add-to-cart fw-bold" data-id="${product.id}">MUA NGAY</button>
+                <a class="btn btn-accent flex-grow-1 fw-bold text-decoration-none text-center d-flex align-items-center justify-content-center" href="./buy-now.html?id=${product.id}&from=home">MUA NGAY</a>
                   <a class="btn btn-outline-light d-inline-flex align-items-center justify-content-center" 
                      href="./product-detail.html?id=${product.id}&from=sport&val=${encodeURIComponent(currentSport)}" 
                      style="width: 42px; height: 37px; min-width: 42px; padding: 0;">
-                    <i class="fa-solid fa-eye"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
                   </a>
                 </div>
               </div>

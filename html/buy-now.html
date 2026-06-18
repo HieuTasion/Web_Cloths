@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SportX | Thương hiệu</title>
+    <title>SportX | Mua Ngay</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,13 +18,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       rel="stylesheet"
     />
-  
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/products.css" />
-    <link rel="stylesheet" href="../css/brands.css" />
+    
     <link rel="stylesheet" href="../css/search.css" />
+    <link rel="stylesheet" href="../css/detail.css" />
   </head>
-  <body class="brand-page">
+  <body>
     <header class="site-header">
       <nav class="navbar navbar-expand-lg navbar-dark container py-3">
         <a class="navbar-brand fw-bold fs-3" href="./index.html">
@@ -51,10 +49,13 @@
                 class="nav-link dropdown-toggle"
                 href="./sports.html"
                 id="sportsDropdown"
+                role="button"
                 data-bs-toggle="dropdown"
-                >Môn thể thao</a
+                aria-expanded="false"
               >
-              <ul class="dropdown-menu">
+                Môn thể thao
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="sportsDropdown">
                 <li>
                   <a class="dropdown-item" href="./sports.html?sport=Chạy bộ"
                     >Chạy bộ</a
@@ -79,7 +80,7 @@
             </li>
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle active"
+                class="nav-link dropdown-toggle"
                 href="#"
                 id="brandDropdown"
                 role="button"
@@ -88,7 +89,7 @@
               >
                 Thương hiệu
               </a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu" aria-labelledby="brandDropdown">
                 <li>
                   <a class="dropdown-item" href="./brands.html?brand=Li-Ning"
                     >Li-Ning</a
@@ -117,8 +118,9 @@
                 <div class="input-group input-group-sm">
                   <span
                     class="input-group-text bg-dark border-secondary border-end-0 text-white-50"
-                    ><i class="fa-solid fa-magnifying-glass"></i
-                  ></span>
+                  >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </span>
                   <input
                     type="text"
                     id="navSearchInput"
@@ -135,8 +137,8 @@
             </li>
             <li class="nav-item">
               <a class="nav-link position-relative" href="./cart.html">
-                <i class="fa-solid fa-cart-shopping"></i
-                ><span id="cartCount" class="cart-badge">0</span>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cartCount" class="cart-badge">0</span>
               </a>
             </li>
             <li class="nav-item">
@@ -151,125 +153,93 @@
       </nav>
     </header>
 
-    <main class="brands-wrap py-5">
-      <div class="container">
+    <main class="detail-wrap">
+      <section class="container detail-hero">
         <nav aria-label="breadcrumb" class="mb-4">
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
               <a href="./index.html">Trang chủ</a>
             </li>
-            <li class="breadcrumb-item active" aria-current="page">
-              Thương hiệu
-            </li>
+            <li class="breadcrumb-item active" aria-current="page">Mua Ngay</li>
           </ol>
         </nav>
 
         <div class="row g-4">
-          <aside class="col-lg-3">
-            <div class="glass-card filter-card p-4">
-              <div class="filter-section">
-                <div class="filter-title">Tìm trong thương hiệu</div>
-                <input
-                  id="productSearch"
-                  type="search"
-                  class="form-control"
-                  placeholder="Tên sản phẩm..."
-                />
+          <div class="col-lg-6">
+            <img
+              id="mainImage"
+              class="gallery-main"
+              src=""
+              alt="Product image"
+            />
+            <div id="thumbsWrap" class="gallery-thumbs"></div>
+          </div>
+          <div class="col-lg-6">
+            <div class="glass-card detail-summary p-3 p-md-4 p-lg-5">
+              <input type="hidden" id="productId" />
+              <span class="section-kicker">Thanh toán nhanh</span>
+              <h1 id="productName" class="section-title mb-2"></h1>
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div id="productRating" class="rating"></div>
+                <span class="price h3 mb-0" id="productPrice"></span>
               </div>
-              <div class="filter-section">
-                <div class="filter-title">Giới tính</div>
-                <div class="d-grid gap-2">
-                  <label class="filter-chip"
-                    ><input
-                      class="form-check-input me-2"
-                      type="checkbox"
-                      value="Nam"
-                      data-filter="gender"
-                    />Nam</label
-                  >
-                  <label class="filter-chip"
-                    ><input
-                      class="form-check-input me-2"
-                      type="checkbox"
-                      value="Nữ"
-                      data-filter="gender"
-                    />Nữ</label
-                  >
-                  <label class="filter-chip"
-                    ><input
-                      class="form-check-input me-2"
-                      type="checkbox"
-                      value="Unisex"
-                      data-filter="gender"
-                    />Unisex</label
-                  >
-                </div>
-              </div>
-              <div class="filter-section">
-                <div class="filter-title">Mức giá</div>
-                <div class="d-grid gap-2">
-                  <label class="filter-chip"
-                    ><input
-                      class="form-check-input me-2"
-                      type="checkbox"
-                      value="under-500"
-                      data-filter="price"
-                    />Dưới 500k</label
-                  >
-                  <label class="filter-chip"
-                    ><input
-                      class="form-check-input me-2"
-                      type="checkbox"
-                      value="500-1000"
-                      data-filter="price"
-                    />500k - 1tr</label
-                  >
-                  <label class="filter-chip"
-                    ><input
-                      class="form-check-input me-2"
-                      type="checkbox"
-                      value="above-1000"
-                      data-filter="price"
-                    />Trên 1tr</label
-                  >
-                </div>
-              </div>
-              <div class="filter-section mt-4">
-                <div class="filter-title">Sắp xếp giá</div>
-                <select
-                  id="sortProducts"
-                  class="form-select bg-dark text-white rounded-pill"
-                >
-                  <option value="default">Mặc định</option>
-                  <option value="price-asc">Thấp đến Cao</option>
-                  <option value="price-desc">Cao đến Thấp</option>
-                </select>
-              </div>
-              <button
-                id="clearFilters"
-                class="btn btn-accent rounded-pill w-100 mt-4"
-              >
-                Xóa bộ lọc
-              </button>
-            </div>
-          </aside>
+              <p id="productSummary" class="text-muted mb-3"></p>
+              <p id="productDescription" class="text-muted"></p>
 
-          <div class="col-lg-9">
-            <div class="mb-5">
-              <h2
-                id="brandTitle"
-                class="h3 mb-0 border-start border-4 border-accent ps-3"
+              <div class="mt-4">
+                <div class="fw-semibold mb-2 text-dark">Chọn kích cỡ</div>
+                <div id="sizeOptions" class="selector-grid"></div>
+              </div>
+
+              <form id="detailForm" class="mt-4">
+                <div class="row g-3 align-items-end">
+                  <div class="col-sm-4">
+                    <label for="quantity" class="form-label">Số lượng</label>
+                    <input
+                      id="quantity"
+                      type="number"
+                      min="1"
+                      value="1"
+                      class="form-control form-control-lg"
+                    />
+                  </div>
+                  <div class="col-sm-8">
+                    <button
+                      id="addToCartBtn"
+                      type="submit"
+                      class="btn btn-accent btn-lg rounded-pill w-100 fw-bold"
+                    >
+                      <i class="fa-solid fa-cart-shopping me-2"></i>Mua Ngay
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              <table
+                class="table table-dark-custom align-middle spec-table mt-4"
               >
-                Đang tải thương hiệu...
-              </h2>
+                <tbody>
+                  <tr>
+                    <td class="text-muted">Chất liệu</td>
+                    <td id="productMaterial"></td>
+                  </tr>
+                  <tr>
+                    <td class="text-muted">Xuất xứ</td>
+                    <td id="productOrigin"></td>
+                  </tr>
+                  <tr>
+                    <td class="text-muted">Trọng lượng</td>
+                    <td id="productWeight"></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="row g-4" id="brandProductsGrid"></div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
 
-    <footer id="contact" class="custom-footer py-5 text-white mt-4">
+    <footer id="contact" class="custom-footer py-5 text-white">
       <div class="container">
         <div class="row align-items-stretch g-5">
           <div
@@ -279,7 +249,7 @@
               class="text-uppercase fw-bold footer-title mb-4"
               style="color: var(--accent-2)"
             >
-              Liên Hệ với chúng tôi
+              Liên Hệ
             </h5>
             <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
               <li class="contact-item d-flex align-items-center">
@@ -290,14 +260,7 @@
                   <span
                     class="d-block text-white-50 small text-uppercase fw-semibold"
                     >Địa chỉ</span
-                  >
-                  <a
-                    href="https://maps.google.com/?q=140+Lê+Trọng+Tấn,+Tây+Thạnh,+Tân+Phú,+Hồ+Chí+Minh"
-                    target="_blank"
-                    class="contact-link"
-                  >
-                    140 Lê Trọng Tấn, Q.Tân Phú, TP.HCM
-                  </a>
+                  >140 Lê Trọng Tấn, Q.Tân Phú, TP.HCM
                 </div>
               </li>
               <li class="contact-item d-flex align-items-center">
@@ -308,13 +271,10 @@
                   <span
                     class="d-block text-white-50 small text-uppercase fw-semibold"
                     >Email</span
-                  >
-                  <a href="mailto:SinhVien@huit.edu.vn" class="contact-link"
-                    >SinhVien@huit.edu.vn</a
-                  >
+                  >SinhVien@huit.edu.vn
                 </div>
               </li>
-              <li class="contact-item d-flex align-items-center">
+                <li class="contact-item d-flex align-items-center">
                 <div class="icon-box text-accent me-3">
                   <i class="fa-solid fa-phone"></i>
                 </div>
@@ -333,12 +293,12 @@
               class="text-uppercase fw-bold footer-title mb-4"
               style="color: var(--accent-2)"
             >
-              Vị trí Bản đồ
+              Vị trí
             </h5>
             <iframe
               src="https://maps.google.com/maps?q=140%20Lê%20Trọng%20Tấn,%20Q.Tân%20Phú,%20TP.HCM&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
-              height="240"
+              height="250"
               style="
                 border: none;
                 border-radius: 12px;
@@ -347,26 +307,12 @@
               "
               allowfullscreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
         </div>
       </div>
       <div class="text-center mt-4 text-white-50 small">
-        <p class="mb-2 footer-copyright-text">
-          &copy; 2024 SportX. Bản quyền thuộc về Sinh Viên HUIT.
-        </p>
-        <div class="footer-social mt-2">
-          <a href="#" class="contact-link" aria-label="Facebook"
-            ><i class="fa-brands fa-facebook"></i
-          ></a>
-          <a href="#" class="contact-link" aria-label="YouTube"
-            ><i class="fa-brands fa-youtube"></i
-          ></a>
-          <a href="#" class="contact-link" aria-label="Email"
-            ><i class="fa-solid fa-envelope"></i
-          ></a>
-        </div>
+        <p>&copy; 2024 SportX. Bản quyền thuộc về Sinh Viên HUIT.</p>
       </div>
     </footer>
 
@@ -374,9 +320,9 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="../js/cart-store.js"></script>
+    <script src="../js/auth.js"></script>
     <script src="../js/catalog.js"></script>
     <script src="../js/search.js"></script>
-    <script src="../js/auth.js"></script>
-    <script src="../js/brands.js"></script>
+    <script src="../js/detail.js"></script>
   </body>
 </html>

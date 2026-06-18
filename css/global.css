@@ -442,6 +442,8 @@ img {
   color: var(--accent-2) !important;
 }
 
+
+
 @media (min-width: 992px) {
   .nav-item.dropdown:hover > .dropdown-menu {
     display: block;

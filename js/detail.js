@@ -141,24 +141,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const quantity = Math.max(1, Number(quantityInput.value) || 1);
 
-    if (window.SportxCartStore) {
+   
+    const isBuyNowPage = window.location.pathname.includes("buy-now.html");
+
+    if (isBuyNowPage) {
+  
+      const buyNowItem = {
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        image: mainImage.src,
+        size: state.size,
+        quantity: quantity,
+      };
+      sessionStorage.setItem(
+        "sportx_buy_now_item",
+        JSON.stringify([buyNowItem]),
+      );
+      window.location.href = "./checkout.html?mode=buynow";
+    } else {
+      // LOGIC THÊM VÀO GIỎ HÀNG: Chỉ thêm vào giỏ và hiện thông báo
       window.SportxCartStore.upsertCartItem({
         id: product.id,
         name: product.name,
         price: product.price,
         image: mainImage.src,
         size: state.size,
-        quantity,
+        quantity: quantity,
       });
-    }
 
-    if (window.Swal) {
-      Swal.fire({
-        icon: "success",
-        title: "Đã thêm vào giỏ hàng",
-        text: `${product.name} đã được thêm với size ${state.size}.`,
-        confirmButtonColor: "#00b7ff",
-      });
+      if (window.Swal) {
+        Swal.fire({
+          icon: "success",
+          title: "Đã thêm vào giỏ hàng",
+          text: `${product.name} (Size ${state.size}) đã được lưu lại.`,
+          confirmButtonColor: "#00b7ff",
+        });
+      }
     }
   });
 });

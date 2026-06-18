@@ -18,12 +18,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/search.css" />
+    <link rel="stylesheet" href="../css/search.css" /> 
     <link rel="stylesheet" href="../css/login.css" />
   </head>
-  <body class="bg-dark text-white login-page">
+  <body class="login-page">
     <header class="site-header">
       <nav class="navbar navbar-expand-lg navbar-dark container py-3">
         <a class="navbar-brand fw-bold fs-3" href="./index.html">
@@ -57,74 +55,50 @@
                 Môn thể thao
               </a>
               <ul class="dropdown-menu" aria-labelledby="sportsDropdown">
-                <li>
-                  <a class="dropdown-item" href="./sports.html?sport=Chạy bộ"
-                    >Chạy bộ</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./sports.html?sport=Bóng rổ"
-                    >Bóng rổ</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./sports.html?sport=Cầu lông"
-                    >Cầu lông</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./sports.html?sport=Bóng đá"
-                    >Bóng đá</a
-                  >
-                </li>
+                <li><a class="dropdown-item" href="./sports.html?sport=Chạy bộ">Chạy bộ</a></li>
+                <li><a class="dropdown-item" href="./sports.html?sport=Bóng rổ">Bóng rổ</a></li>
+                <li><a class="dropdown-item" href="./sports.html?sport=Cầu lông">Cầu lông</a></li>
+                <li><a class="dropdown-item" href="./sports.html?sport=Bóng đá">Bóng đá</a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="brandDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Thương hiệu
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="brandDropdown">
-                  <li><a class="dropdown-item" href="./brands.html?brand=Li-Ning">Li-Ning</a></li>
-                  <li><a class="dropdown-item" href="./brands.html?brand=361º">361º</a></li>
-                  <li><a class="dropdown-item" href="./brands.html?brand=adidas">adidas</a></li>
-                </ul>
-              </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="brandDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Thương hiệu
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="brandDropdown">
+                <li><a class="dropdown-item" href="./brands.html?brand=Li-Ning">Li-Ning</a></li>
+                <li><a class="dropdown-item" href="./brands.html?brand=361º">361º</a></li>
+                <li><a class="dropdown-item" href="./brands.html?brand=adidas">adidas</a></li>
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./products.html">Bộ sưu tập</a>
             </li>
-
             <li class="nav-item">
               <a class="nav-link" href="./contact.html">Liên hệ</a>
             </li>
             <li class="nav-item">
-     
               <div class="search-container mx-lg-3">
                 <div class="input-group input-group-sm">
-                  <span
-                    class="input-group-text bg-dark border-secondary border-end-0 text-white-50"
-                    ><i class="fa-solid fa-magnifying-glass"></i
-                  ></span>
+                  <span class="input-group-text bg-light border-secondary border-end-0 text-muted">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </span>
                   <input
                     type="text"
                     id="navSearchInput"
-                    class="form-control bg-dark border-secondary border-start-0 text-white"
+                    class="form-control bg-light border-secondary border-start-0 text-dark"
                     placeholder="Tìm sản phẩm..."
                     autocomplete="off"
                   />
                 </div>
-                <div
-                  id="navSearchResults"
-                  class="search-results-dropdown d-none"
-                ></div>
+                <div id="navSearchResults" class="search-results-dropdown d-none"></div>
               </div>
             </li>
             <li class="nav-item">
@@ -134,11 +108,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a
-                class="btn btn-outline-light rounded-pill px-4 active"
-                href="./login.html"
-                >Đăng nhập</a
-              >
+              <a class="btn btn-outline-light rounded-pill px-4 active" href="./login.html">Đăng nhập</a>
             </li>
           </ul>
         </div>
@@ -151,50 +121,41 @@
           <div class="col-lg-5">
             <div class="glass-card auth-hero h-100 p-4 p-lg-5">
               <span class="section-kicker">Chào mừng trở lại</span>
-              <h1 class="section-title">Truy cập tài khoản SportX</h1>
-              <p class="text-white-50 mb-4">
-                Đăng nhập để tiếp tục mua sắm, hoặc tạo tài khoản mới chỉ trong
-                vài giây.
+              <h1 class="section-title text-dark">Truy cập tài khoản SportX</h1>
+              <p class="text-muted mb-4">
+                Đăng nhập để tiếp tục mua sắm, hoặc tạo tài khoản mới chỉ trong vài giây.
               </p>
-              <div class="d-grid gap-3">
+              <div class="d-grid gap-3 text-dark">
                 <div class="contact-item">
                   <i class="fa-solid fa-basket-shopping text-accent"></i>
                   <div>
-                    <small>Thanh toán nhanh</small>
-                    <div >Lưu thông tin phiên đăng nhập</div>
+                    <small class="text-muted">Thanh toán nhanh</small>
+                    <div>Lưu thông tin phiên đăng nhập</div>
                   </div>
                 </div>
                 <div class="contact-item">
                   <i class="fa-solid fa-shield-heart text-accent"></i>
                   <div>
-                    <small>Bảo mật</small>
+                    <small class="text-muted">Bảo mật</small>
                     <div>Xác thực rõ ràng với gợi ý lỗi chi tiết</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          
           <div class="col-lg-7">
             <div class="glass-card h-100 p-4 p-lg-5">
               <div id="signedInState" class="d-none mb-4">
-                <div
-                  class="p-4 rounded-4 border border-info-subtle bg-black bg-opacity-25"
-                >
+                <div class="p-4 rounded-4 border border-info-subtle bg-light">
                   <span class="section-kicker">Tài khoản hiện tại</span>
-                  <h2 id="signedInName" class="h3 text-white mb-2"></h2>
-                  <p id="signedInEmail" class="text-white-50 mb-3"></p>
+                  <h2 id="signedInName" class="h3 text-dark mb-2"></h2>
+                  <p id="signedInEmail" class="text-muted mb-3"></p>
                   <div class="d-flex flex-wrap gap-2">
-                    <button
-                      id="logoutBtn"
-                      type="button"
-                      class="btn btn-outline-light rounded-pill px-4"
-                    >
+                    <button id="logoutBtn" type="button" class="btn btn-outline-dark rounded-pill px-4">
                       Đăng xuất
                     </button>
-                    <a
-                      href="./products.html"
-                      class="btn btn-accent rounded-pill px-4"
-                    >
+                    <a href="./buy-now.html" class="btn btn-accent rounded-pill px-4">
                       Tiếp tục mua sắm
                     </a>
                   </div>
@@ -202,218 +163,84 @@
               </div>
 
               <div id="authForms">
-                <ul
-                  class="nav nav-pills auth-tabs mb-4"
-                  id="authTabs"
-                  role="tablist"
-                >
+                <ul class="nav nav-pills auth-tabs mb-4" id="authTabs" role="tablist">
                   <li class="nav-item" role="presentation">
-                    <button
-                      class="nav-link active"
-                      id="login-tab"
-                      data-bs-toggle="pill"
-                      data-bs-target="#loginPane"
-                      type="button"
-                      role="tab"
-                      aria-controls="loginPane"
-                      aria-selected="true"
-                    >
+                    <button class="nav-link active" id="login-tab" data-bs-toggle="pill" data-bs-target="#loginPane" type="button" role="tab" aria-controls="loginPane" aria-selected="true">
                       Đăng nhập
                     </button>
                   </li>
                   <li class="nav-item" role="presentation">
-                    <button
-                      class="nav-link"
-                      id="register-tab"
-                      data-bs-toggle="pill"
-                      data-bs-target="#registerPane"
-                      type="button"
-                      role="tab"
-                      aria-controls="registerPane"
-                      aria-selected="false"
-                    >
+                    <button class="nav-link" id="register-tab" data-bs-toggle="pill" data-bs-target="#registerPane" type="button" role="tab" aria-controls="registerPane" aria-selected="false">
                       Đăng ký
                     </button>
                   </li>
                 </ul>
 
                 <div class="tab-content">
-                  <div
-                    class="tab-pane fade show active"
-                    id="loginPane"
-                    role="tabpanel"
-                    aria-labelledby="login-tab"
-                    tabindex="0"
-                  >
+                  <div class="tab-pane fade show active" id="loginPane" role="tabpanel" aria-labelledby="login-tab" tabindex="0">
                     <form id="loginForm" novalidate>
                       <div class="mb-3">
-                        <label for="loginEmail" class="form-label text-white-50 small text-uppercase fw-bold"
-                          >Địa chỉ Email</label
-                        >
+                        <label for="loginEmail" class="form-label text-muted small text-uppercase fw-bold">Địa chỉ Email</label>
                         <div class="input-group input-group-lg has-validation">
-                          <span class="input-group-text"
-                            ><i class="fa-solid fa-envelope"></i
-                          ></span>
-                          <input
-                            type="email"
-                            id="loginEmail"
-                            class="form-control"
-                            placeholder="ten@vidu.com"
-                            aria-describedby="loginEmailFeedback"
-                          />
+                          <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                          <input type="email" id="loginEmail" class="form-control" placeholder="ten@vidu.com" aria-describedby="loginEmailFeedback" />
                         </div>
-                        <div
-                          id="loginEmailFeedback"
-                          class="invalid-feedback"
-                        ></div>
+                        <div id="loginEmailFeedback" class="invalid-feedback"></div>
                       </div>
                       <div class="mb-3">
-                        <label for="loginPassword" class="form-label text-white-50 small text-uppercase fw-bold"
-                          >Mật khẩu</label
-                        >
+                        <label for="loginPassword" class="form-label text-muted small text-uppercase fw-bold">Mật khẩu</label>
                         <div class="input-group input-group-lg has-validation">
-                          <span class="input-group-text"
-                            ><i class="fa-solid fa-lock"></i
-                          ></span>
-                          <input
-                            type="password"
-                            id="loginPassword"
-                            class="form-control"
-                            placeholder="Nhập mật khẩu của bạn"
-                            aria-describedby="loginPasswordFeedback"
-                          />
+                          <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                          <input type="password" id="loginPassword" class="form-control" placeholder="Nhập mật khẩu của bạn" aria-describedby="loginPasswordFeedback" />
                         </div>
-                        <div
-                          id="loginPasswordFeedback"
-                          class="invalid-feedback"
-                        ></div>
+                        <div id="loginPasswordFeedback" class="invalid-feedback"></div>
                       </div>
-                      <div
-                        class="d-flex justify-content-between align-items-center mb-4"
-                      >
+                      <div class="d-flex justify-content-between align-items-center mb-4">
                         <div class="form-check">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="rememberMe"
-                          />
-                          <label class="form-check-label text-white-50" for="rememberMe"
-                            >Ghi nhớ đăng nhập</label
-                          >
+                          <input class="form-check-input" type="checkbox" id="rememberMe" />
+                          <label class="form-check-label text-muted" for="rememberMe">Ghi nhớ đăng nhập</label>
                         </div>
-                        <a
-                          href="#"
-                          class="text-decoration-none text-accent fw-semibold"
-                          >Quên mật khẩu?</a
-                        >
+                        <a href="#" class="text-decoration-none text-accent fw-semibold">Quên mật khẩu?</a>
                       </div>
-                      <button
-                        type="submit"
-                        class="btn btn-accent btn-lg rounded-pill w-100"
-                      >
-                        Đăng nhập
-                      </button>
+                      <button type="submit" class="btn btn-accent btn-lg rounded-pill w-100">Đăng nhập</button>
                     </form>
                   </div>
 
-                  <div
-                    class="tab-pane fade"
-                    id="registerPane"
-                    role="tabpanel"
-                    aria-labelledby="register-tab"
-                    tabindex="0"
-                  >
+                  <div class="tab-pane fade" id="registerPane" role="tabpanel" aria-labelledby="register-tab" tabindex="0">
                     <form id="registerForm" novalidate>
                       <div class="mb-3">
-                        <label for="registerName" class="form-label text-white-50 small text-uppercase fw-bold"
-                          >Họ và tên</label
-                        >
+                        <label for="registerName" class="form-label text-muted small text-uppercase fw-bold">Họ và tên</label>
                         <div class="input-group input-group-lg has-validation">
-                          <span class="input-group-text"
-                            ><i class="fa-solid fa-user"></i
-                          ></span>
-                          <input
-                            type="text"
-                            id="registerName"
-                            class="form-control"
-                            placeholder="Họ tên của bạn"
-                            aria-describedby="registerNameFeedback"
-                          />
+                          <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                          <input type="text" id="registerName" class="form-control" placeholder="Họ tên của bạn" aria-describedby="registerNameFeedback" />
                         </div>
-                        <div
-                          id="registerNameFeedback"
-                          class="invalid-feedback"
-                        ></div>
+                        <div id="registerNameFeedback" class="invalid-feedback"></div>
                       </div>
                       <div class="mb-3">
-                        <label for="registerEmail" class="form-label text-white-50 small text-uppercase fw-bold"
-                          >Địa chỉ Email</label
-                        >
+                        <label for="registerEmail" class="form-label text-muted small text-uppercase fw-bold">Địa chỉ Email</label>
                         <div class="input-group input-group-lg has-validation">
-                          <span class="input-group-text"
-                            ><i class="fa-solid fa-envelope"></i
-                          ></span>
-                          <input
-                            type="email"
-                            id="registerEmail"
-                            class="form-control"
-                            placeholder="ten@vidu.com"
-                            aria-describedby="registerEmailFeedback"
-                          />
+                          <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                          <input type="email" id="registerEmail" class="form-control" placeholder="ten@vidu.com" aria-describedby="registerEmailFeedback" />
                         </div>
-                        <div
-                          id="registerEmailFeedback"
-                          class="invalid-feedback"
-                        ></div>
+                        <div id="registerEmailFeedback" class="invalid-feedback"></div>
                       </div>
                       <div class="mb-3">
-                        <label for="registerPassword" class="form-label text-white-50 small text-uppercase fw-bold"
-                          >Mật khẩu</label
-                        >
+                        <label for="registerPassword" class="form-label text-muted small text-uppercase fw-bold">Mật khẩu</label>
                         <div class="input-group input-group-lg has-validation">
-                          <span class="input-group-text"
-                            ><i class="fa-solid fa-lock"></i
-                          ></span>
-                          <input
-                            type="password"
-                            id="registerPassword"
-                            class="form-control"
-                            placeholder="Ít nhất 6 ký tự"
-                            aria-describedby="registerPasswordFeedback"
-                          />
+                          <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                          <input type="password" id="registerPassword" class="form-control" placeholder="Ít nhất 6 ký tự" aria-describedby="registerPasswordFeedback" />
                         </div>
-                        <div
-                          id="registerPasswordFeedback"
-                          class="invalid-feedback"
-                        ></div>
+                        <div id="registerPasswordFeedback" class="invalid-feedback"></div>
                       </div>
                       <div class="mb-4">
-                        <label for="registerConfirm" class="form-label text-white-50 small text-uppercase fw-bold"
-                          >Xác nhận mật khẩu</label
-                        >
+                        <label for="registerConfirm" class="form-label text-muted small text-uppercase fw-bold">Xác nhận mật khẩu</label>
                         <div class="input-group input-group-lg has-validation">
-                          <span class="input-group-text "
-                            ><i class="fa-solid fa-shield-halved"></i
-                          ></span>
-                          <input
-                            type="password"
-                            id="registerConfirm"
-                            class="form-control"
-                            placeholder="Nhập lại mật khẩu"
-                            aria-describedby="registerConfirmFeedback"
-                          />
+                          <span class="input-group-text"><i class="fa-solid fa-shield-halved"></i></span>
+                          <input type="password" id="registerConfirm" class="form-control" placeholder="Nhập lại mật khẩu" aria-describedby="registerConfirmFeedback" />
                         </div>
-                        <div
-                          id="registerConfirmFeedback"
-                          class="invalid-feedback"
-                        ></div>
+                        <div id="registerConfirmFeedback" class="invalid-feedback"></div>
                       </div>
-                      <button
-                        type="submit"
-                        class="btn btn-accent btn-lg rounded-pill w-100"
-                      >
-                        Tạo tài khoản
-                      </button>
+                      <button type="submit" class="btn btn-accent btn-lg rounded-pill w-100">Tạo tài khoản</button>
                     </form>
                   </div>
                 </div>
@@ -424,87 +251,42 @@
       </div>
     </main>
 
-    <footer id="contact" class="custom-footer py-5 text-white">
+    <footer id="contact" class="custom-footer py-5 text-white mt-4">
       <div class="container">
         <div class="row align-items-stretch g-5">
-          <div
-            class="col-12 col-md-6 d-flex flex-column justify-content-center"
-          >
-            <h5
-              class="text-uppercase fw-bold footer-title mb-4"
-              style="color: var(--accent-2)"
-            >
-              Liên Hệ với chúng tôi
-            </h5>
-
+          <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
+            <h5 class="text-uppercase fw-bold footer-title mb-4" style="color: var(--accent-2)">Liên Hệ với chúng tôi</h5>
             <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
               <li class="contact-item d-flex align-items-center">
-                <div class="icon-box text-accent me-3">
-                  <i class="fa-solid fa-location-dot"></i>
-                </div>
+                <div class="icon-box text-accent me-3"><i class="fa-solid fa-location-dot"></i></div>
                 <div>
-                  <span
-                    class="d-block text-white-50 small text-uppercase fw-semibold"
-                    >Địa chỉ</span
-                  >
-                  <a
-                    href="https://maps.google.com/?q=140+Lê+Trọng+Tấn,+Tây+Thạnh,+Tân+Phú,+Hồ+Chí+Minh"
-                    target="_blank"
-                    class="contact-link"
-                  >
-                    140 Lê Trọng Tấn, Q.Tân Phú, TP.HCM
-                  </a>
+                  <span class="d-block text-white-50 small text-uppercase fw-semibold">Địa chỉ</span>
+                  <a href="https://maps.google.com/?q=140+Lê+Trọng+Tấn,+Tây+Thạnh,+Tân+Phú,+Hồ+Chí+Minh" target="_blank" class="contact-link">140 Lê Trọng Tấn, Q.Tân Phú, TP.HCM</a>
                 </div>
               </li>
-
               <li class="contact-item d-flex align-items-center">
-                <div class="icon-box text-accent me-3">
-                  <i class="fa-solid fa-envelope"></i>
-                </div>
+                <div class="icon-box text-accent me-3"><i class="fa-solid fa-envelope"></i></div>
                 <div>
-                  <span
-                    class="d-block text-white-50 small text-uppercase fw-semibold"
-                    >Email</span
-                  >
-                  <a href="mailto:SinhVien@huit.edu.vn" class="contact-link"
-                    >SinhVien@huit.edu.vn</a
-                  >
+                  <span class="d-block text-white-50 small text-uppercase fw-semibold">Email</span>
+                  <a href="mailto:SinhVien@huit.edu.vn" class="contact-link">SinhVien@huit.edu.vn</a>
                 </div>
               </li>
-
               <li class="contact-item d-flex align-items-center">
-                <div class="icon-box text-accent me-3">
-                  <i class="fa-solid fa-phone"></i>
-                </div>
+                <div class="icon-box text-accent me-3"><i class="fa-solid fa-phone"></i></div>
                 <div>
-                  <span
-                    class="d-block text-white-50 small text-uppercase fw-semibold"
-                    >Số điện thoại</span
-                  >
+                  <span class="d-block text-white-50 small text-uppercase fw-semibold">Số điện thoại</span>
                   <a href="tel:0329405678" class="contact-link">0329 405 678</a>
                 </div>
               </li>
             </ul>
           </div>
-
           <div class="col-12 col-md-6">
-            <h5
-              class="text-uppercase fw-bold footer-title mb-4"
-              style="color: var(--accent-2)"
-            >
-              Vị trí Bản đồ
-            </h5>
-
+            <h5 class="text-uppercase fw-bold footer-title mb-4" style="color: var(--accent-2)">Vị trí Bản đồ</h5>
             <iframe
               src="https://maps.google.com/maps?q=140%20Lê%20Trọng%20Tấn,%20Q.Tân%20Phú,%20TP.HCM&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="240"
-              style="
-                border: none;
-                border-radius: 12px;
-                background-color: white;
-                display: block;
-              "
+              style="border: none; border-radius: 12px; background-color: white; display: block;"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
@@ -513,19 +295,11 @@
         </div>
       </div>
       <div class="text-center mt-4 text-white-50 small">
-        <p class="mb-2 footer-copyright-text">
-          &copy; 2024 SportX. Bản quyền thuộc về Sinh Viên HUIT.
-        </p>
+        <p class="mb-2 footer-copyright-text">© 2024 SportX. Bản quyền thuộc về Sinh Viên HUIT.</p>
         <div class="footer-social mt-2">
-          <a href="#" class="contact-link" aria-label="Facebook">
-            <i class="fa-brands fa-facebook"></i>
-          </a>
-          <a href="#" class="contact-link" aria-label="YouTube">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
-          <a href="#" class="contact-link" aria-label="Email">
-            <i class="fa-solid fa-envelope"></i>
-          </a>
+          <a href="#" class="contact-link" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="contact-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="contact-link" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
         </div>
       </div>
     </footer>
@@ -537,7 +311,6 @@
     <script src="../js/catalog.js"></script>
     <script src="../js/search.js"></script>
     <script src="../js/auth.js"></script>
-
     <script src="../js/validation.js"></script>
   </body>
 </html>

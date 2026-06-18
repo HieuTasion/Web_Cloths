@@ -342,6 +342,55 @@
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
+
+
+.faq-accordion .accordion-item {
+  background: #ffffff !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+  transition: all 0.3s ease;
+}
+
+.faq-accordion .accordion-item:hover {
+  border-color: var(--accent) !important;
+  box-shadow: 0 8px 20px rgba(216, 90, 48, 0.06) !important;
+}
+
+
+.faq-accordion .accordion-button {
+  background: transparent !important;
+  padding: 1.25rem 1.5rem;
+  font-size: 1.05rem;
+  box-shadow: none !important;
+}
+
+
+.faq-accordion .accordion-button:not(.collapsed) {
+  color: var(--accent) !important; 
+  background: rgba(216, 90, 48, 0.03) !important; 
+  border-bottom: 1px solid rgba(216, 90, 48, 0.1);
+}
+
+
+.faq-accordion .accordion-button::after {
+  transition: transform 0.2s ease-in-out;
+}
+
+.faq-accordion .accordion-button:not(.collapsed)::after {
+  filter: invert(41%) sepia(82%) saturate(972%) hue-rotate(339deg) brightness(88%) contrast(92%);
+
+}
+
+
+.faq-accordion .accordion-body {
+  padding: 1.25rem 1.5rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  background: #ffffff;
+}
+
 @media (max-width: 767.98px) {
   .contact-card .contact-list {
     grid-template-columns: 1fr;

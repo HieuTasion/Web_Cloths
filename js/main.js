@@ -92,9 +92,9 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="price fs-5 fw-bold text-accent">${oldPriceHtml}${product.price.toLocaleString()}đ</div>
             </div>
             <div class="d-flex gap-2">
-                  <button class="btn btn-accent flex-grow-1 js-add-to-cart fw-bold" data-id="${product.id}">MUA NGAY</button>
+                  <a class="btn btn-accent flex-grow-1 fw-bold text-decoration-none text-center d-flex align-items-center justify-content-center" href="./buy-now.html?id=${product.id}&from=home">MUA NGAY</a>
                   <a class="btn btn-outline-light" href="./product-detail.html?id=${product.id}&from=home">
-                    <i class="fa-solid fa-eye"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
                   </a>
                 </div>
               </div>
@@ -117,7 +117,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const viewLink = event.target.closest('a[href*="product-detail.html"]');
 
       // Nếu click vào link "Xem" thì để trình duyệt tự xử lý chuyển trang
-      if (viewLink) return;
+      if (viewLink || event.target.closest('a[href*="product-detail.html"]'))
+        return;
 
       if (card) {
         const detailLink = card.querySelector('a[href*="product-detail.html"]');
@@ -148,23 +149,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
       return;
-    }
-
-    window.SportxCartStore.upsertCartItem({
-      id: product.id,
-      name: product.name,
-      price: product.price,
-      image: product.image,
-      quantity: 1,
-    });
-
-    if (window.Swal) {
-      Swal.fire({
-        icon: "success",
-        title: "Đã thêm vào giỏ hàng",
-        text: `${product.name} đã được thêm vào giỏ của bạn.`,
-        confirmButtonColor: "#00b7ff",
-      });
     }
   });
 });
