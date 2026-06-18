@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SportX | Cửa hàng Đồ thể thao</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/search.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg navbar-dark container py-3">
+        <a class="navbar-brand fw-bold fs-3" href="./index.html">
+          <i class="fa-solid fa-basketball me-2"></i>SportX
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+            <li class="nav-item">
+              <a class="nav-link active" href="./index.html">Trang chủ</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="./sports.html"
+                id="sportsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Môn thể thao
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="sportsDropdown">
+                <li>
+                  <a class="dropdown-item" href="./sports.html?sport=Chạy bộ"
+                    >Chạy bộ</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./sports.html?sport=Bóng rổ"
+                    >Bóng rổ</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./sports.html?sport=Cầu lông"
+                    >Cầu lông</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./sports.html?sport=Bóng đá"
+                    >Bóng đá</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="brandDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Thương hiệu
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="brandDropdown">
+                <li>
+                  <a class="dropdown-item" href="./brands.html?brand=Li-Ning"
+                    >Li-Ning</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./brands.html?brand=361º"
+                    >361º</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./brands.html?brand=adidas"
+                    >adidas</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./products.html">Bộ sưu tập</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Liên hệ</a>
+            </li>
+            <li class="nav-item">
+              <div class="search-container mx-lg-3">
+                <div class="input-group input-group-sm">
+                  <span
+                    class="input-group-text bg-dark border-secondary border-end-0 text-white-50"
+                    ><i class="fa-solid fa-magnifying-glass"></i
+                  ></span>
+                  <input
+                    type="text"
+                    id="navSearchInput"
+                    class="form-control bg-dark border-secondary border-start-0 text-white"
+                    placeholder="Tìm sản phẩm..."
+                    autocomplete="off"
+                  />
+                </div>
+                <div
+                  id="navSearchResults"
+                  class="search-results-dropdown d-none"
+                ></div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="./cart.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cartCount" class="cart-badge">0</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="btn btn-outline-light rounded-pill px-4"
+                href="./login"
+                href="./login.html"
+                >Đăng nhập</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero-section">
+        <div class="container position-relative">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right">
+              <span
+                class="hero-pill mb-3 d-inline-flex align-items-center gap-2"
+              >
+                <i class="fa-solid fa-bolt"></i> Bộ sưu tập mùa mới
+              </span>
+              <h1 class="display-4 fw-bold text-white lh-1 mb-3">
+                Chơi hết mình. Tập thông minh. Đẹp phong cách.
+              </h1>
+              <p class="lead text-white-50 mb-4">
+                Khám phá giày sneakers, đồ thể thao và trang thiết bị cao cấp
+                được thiết kế cho hiệu suất đỉnh cao và phong cách hàng ngày.
+              </p>
+              <div class="d-flex flex-wrap gap-3">
+                <a
+                  href="./products.html"
+                  class="btn btn-accent btn-lg rounded-pill px-4"
+                  >Mua ngay</a
+                >
+                <a
+                  href="#lookbook"
+                  class="btn btn-outline-light btn-lg rounded-pill px-4"
+                  >Xem câu chuyện</a
+                >
+              </div>
+              <div class="hero-stats mt-5">
+                <div><strong>150+</strong><span>Sản phẩm cao cấp</span></div>
+                <div><strong>24h</strong><span>Hỗ trợ nhanh chóng</span></div>
+                <div>
+                  <strong>4.9/5</strong><span>Đánh giá khách hàng</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+              <div class="slider-shell">
+                <div id="heroSlider" class="hero-slider">
+                  <img
+                    src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80"
+                    alt="Giày chạy bộ"
+                    class="slider-image active"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80"
+                    alt="Giày Sneakers"
+                    class="slider-image"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1200&q=80"
+                    alt="Trang phục Gym"
+                    class="slider-image"
+                  />
+                </div>
+                <div class="slider-overlay">
+                  <span class="hero-badge">Bán chạy nhất</span>
+                  <h2 class="mt-3 mb-1">Alpha Run Pro</h2>
+                  <p class="mb-0">
+                    Nhẹ nhàng, phản hồi tốt và sẵn sàng cho mọi dặm đường.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-strip mt-2">
+        <div class="container">
+          <div class="row g-3 text-center">
+            <div class="col-md-4" data-aos="zoom-in">
+              <div class="feature-card">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Giao hàng miễn phí</h3>
+                <p>Cho đơn hàng trên $50.</p>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+              <div class="feature-card">
+                <i class="fa-solid fa-shield-heart"></i>
+                <h3>Bảo hành đi kèm</h3>
+                <p>Trang bị chính hãng với cam kết chất lượng.</p>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+              <div class="feature-card">
+                <i class="fa-solid fa-credit-card"></i>
+                <h3>Thanh toán bảo mật</h3>
+                <p>Thanh toán nhanh chóng và lưu trữ an toàn.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-gap">
+        <div class="container">
+          <div
+            class="section-heading d-flex align-items-end justify-content-between gap-3 mb-4"
+          >
+            <div>
+              <span class="section-kicker">Sản phẩm nổi bật</span>
+              <h2 class="section-title">
+                Lựa chọn hàng đầu cho tập luyện và phong cách
+              </h2>
+            </div>
+            <a
+              href="./products.html"
+              class="text-decoration-none text-accent fw-semibold"
+              >Xem danh mục <i class="fa-solid fa-arrow-right ms-1"></i
+            ></a>
+          </div>
+          <div id="productGrid" class="row g-4"></div>
+        </div>
+      </section>
+
+      <section id="lookbook" class="section-gap section-dark-custom py-5">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6" data-aos="fade-up">
+              <span class="section-kicker text-uppercase fs-3"
+                >Câu chuyện của cửa hàng</span
+              >
+              <h2 class="section-title text-black fw-bold mb-3">
+                Cái nhìn nhanh về thương hiệu
+              </h2>
+              <p class="text-black-50 mb-4lh-base">
+                Khám phá năng lượng tại cửa hàng hàng đầu của chúng tôi và những
+                trang bị được tuyển chọn cho người chạy bộ, vận động viên và mọi
+                hoạt động hàng ngày.
+              </p>
+              <img
+                src="https://cdn.hstatic.net/files/1000150581/article/4-cach-phoi-do-the-thao-mua-he-cho-nam-nu-dep_-thoang-mat-va-nang-dong_f4bd108128834952815dc9e0c764b425.png"
+                alt="Lookbook"
+                class="img-fluid rounded-3 main-lookbook-img"
+              />
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left">
+              <div class="lookbook-grid">
+                <img
+                  src="https://cdn.hstatic.net/files/1000150581/article/giay-bong-ro-outdoor-anta-thumbnail_224e71d0c4db43529c07f489b4be0b61_medium.jpg"
+                  alt="Workout gear"
+                />
+                <img
+                  src="https://cdn.hstatic.net/files/1000150581/article/ach-chon-giay-chay-bo-road-chuan-nhat-cho-cu-ly-10km-va-21km-thumbnail_e52da571ecf64711a4a78d022516b618_medium.jpg"
+                  alt="Sport fashion"
+                />
+                <img
+                  src="https://cdn.hstatic.net/files/1000150581/article/anta-viet-nam-van-hoa-the-thao-thumbnail_ce3f9dcaec184023b8d3cf4523d0a616.jpg"
+                  alt="Accessories"
+                />
+                <img
+                  src="https://cdn.hstatic.net/files/1000150581/article/giay-chay-bo-5km-thumbnail_d9398482e40c4fbf93b687851ccc4312.jpg"
+                  alt="Training shoes"
+                />
+                <img
+                  src="https://cdn.hstatic.net/files/1000150581/article/online_1800x1206_web_4d92f510e36145d883ed4e21903ceb50.jpg"
+                  alt="Running shoes"
+                />
+                <img
+                  src="https://cdn.hstatic.net/files/1000150581/article/giay-anta-nam-thumbnail_d2665735df5549399593d60b0cf2554c.jpg"
+                  alt="Sport accessories"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="custom-footer py-5 text-white">
+      <div class="container">
+        <div class="row align-items-stretch g-5">
+          <div
+            class="col-12 col-md-6 d-flex flex-column justify-content-center"
+          >
+            <h5
+              class="text-uppercase fw-bold footer-title mb-4"
+              style="color: var(--accent-2)"
+            >
+              Liên Hệ với chúng tôi
+            </h5>
+
+            <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+              <li class="contact-item d-flex align-items-center">
+                <div class="icon-box text-accent me-3">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <span
+                    class="d-block text-white-50 small text-uppercase fw-semibold"
+                    >Địa chỉ</span
+                  >
+                  <a
+                    href="https://maps.google.com/?q=140+Lê+Trọng+Tấn,+Tây+Thạnh,+Tân+Phú,+Hồ+Chí+Minh"
+                    target="_blank"
+                    class="contact-link"
+                  >
+                    140 Lê Trọng Tấn, Q.Tân Phú, TP.HCM
+                  </a>
+                </div>
+              </li>
+
+              <li class="contact-item d-flex align-items-center">
+                <div class="icon-box text-accent me-3">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <span
+                    class="d-block text-white-50 small text-uppercase fw-semibold"
+                    >Email</span
+                  >
+                  <a href="mailto:SinhVien@huit.edu.vn" class="contact-link"
+                    >SinhVien@huit.edu.vn</a
+                  >
+                </div>
+              </li>
+
+              <li class="contact-item d-flex align-items-center">
+                <div class="icon-box text-accent me-3">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <span
+                    class="d-block text-white-50 small text-uppercase fw-semibold"
+                    >Số điện thoại</span
+                  >
+                  <a href="tel:0329405678" class="contact-link">0329 405 678</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <h5
+              class="text-uppercase fw-bold footer-title mb-4"
+              style="color: var(--accent-2)"
+            >
+              Vị trí Bản đồ
+            </h5>
+
+            <iframe
+              src="https://maps.google.com/maps?q=140%20Lê%20Trọng%20Tấn,%20Q.Tân%20Phú,%20TP.HCM&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="240"
+              style="
+                border: none;
+                border-radius: 12px;
+                background-color: white;
+                display: block;
+              "
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4 text-white-50 small">
+        <p class="mb-2 footer-copyright-text">
+          &copy; 2024 SportX. Bản quyền thuộc về Sinh Viên HUIT.
+        </p>
+        <div class="footer-social mt-2">
+          <a href="#" class="contact-link" aria-label="Facebook">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="#" class="contact-link" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="#" class="contact-link" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="../js/cart-store.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/catalog.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/slider.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+    <script>
+      window.chatbaseConfig = {
+        chatbotId: "_gDJrvTksR0-m0B_4MyMy",
+      };
+    </script>
+    <script
+      src="https://www.chatbase.co/embed.min.js"
+      id="_gDJrvTksR0-m0B_4MyMy"
+      defer
+    ></script>
+  </body>
+</html>

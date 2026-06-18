@@ -1,0 +1,103 @@
+.login-page {
+  /* Thay đổi nền chính thành màu trắng xám sáng */
+  background: #f8f9fa !important;
+  color: #212529 !important;
+  min-height: 100vh;
+}
+
+.auth-hero {
+  min-height: 100%;
+
+  background: linear-gradient(
+    135deg,
+    rgba(0, 183, 255, 0.05) 0%,
+    rgba(255, 138, 0, 0.05) 100%
+  ) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.auth-tabs .nav-link {
+  border-radius: 999px;
+  color: #6c757d;
+}
+
+.auth-tabs .nav-link.active {
+  /* Tab đang chọn chuyển sang Gradient Xanh - Cam */
+  background: linear-gradient(135deg, #00b7ff, #ff8a00) !important;
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.login-page .btn-accent {
+  background: linear-gradient(135deg, #00b7ff, #ff8a00) !important;
+  border: none !important;
+  color: #fff !important;
+  transition: 0.3s all ease;
+}
+
+.login-page .btn-accent:hover {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 183, 255, 0.3);
+}
+
+.login-page .glass-card {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: #212529 !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05) !important;
+}
+
+.login-page .section-title,
+.login-page .h3 {
+  color: #212529 !important;
+}
+
+.login-page .auth-wrap .text-white-50 {
+  color: #6c757d !important;
+}
+
+.login-page .custom-footer .footer-title,
+.login-page .custom-footer .text-accent {
+  color: #d85a30 !important;
+}
+
+.login-page .custom-footer .footer-title::after {
+  background-color: #d85a30 !important;
+}
+
+.login-page .custom-footer .text-white-50 {
+  color: #888888 !important;
+}
+
+.login-page .custom-footer .contact-item:hover .icon-box {
+  background: #d85a30 !important;
+  color: #fff !important;
+}
+
+.login-page .form-control,
+.login-page .form-select {
+  border-color: #000000;
+  color: #000000;
+}
+
+.login-page .input-group-text {
+  color: #000000;
+}
+
+.login-page .form-control:focus,
+.login-page .form-select:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.login-page .input-group-text i {
+  color: #000000 !important;
+}
+
+.filter-card .form-select,
+.filter-card .form-control {
+  background-color: #f8f9fa;
+  color: #1a1a1a;
+  border: 1px solid #dee2e6;
+}

@@ -1,0 +1,364 @@
+.hero-section {
+  position: relative;
+  padding: 5rem 0 4rem;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(216, 90, 48, 0.15),
+    transparent
+  );
+  pointer-events: none;
+}
+
+.hero-pill {
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  background: #2a2a2a;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.hero-badge {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 700;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.hero-stats div,
+.feature-card {
+  border: 1px solid #333;
+  background: #222;
+  backdrop-filter: blur(12px);
+}
+
+.hero-stats div {
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+.hero-stats strong {
+  display: block;
+  font-size: 1.3rem;
+}
+
+.hero-stats span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.slider-shell {
+  position: relative;
+  overflow: hidden;
+  border-radius: 32px;
+  min-height: 560px;
+  box-shadow: var(--shadow);
+}
+
+.hero-slider {
+  position: relative;
+  min-height: 560px;
+}
+
+.slider-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.slider-image.active {
+  opacity: 1;
+}
+
+.slider-overlay {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  padding: 1.25rem;
+  border-radius: 24px;
+  background: rgba(8, 15, 27, 0.74);
+  border: 1px solid rgba(0, 183, 255, 0.18);
+}
+
+.feature-strip {
+  margin-top: -1rem;
+  padding-bottom: 1rem;
+}
+
+.feature-card {
+  height: 100%;
+  padding: 1.5rem;
+  border-radius: 24px;
+}
+
+.feature-card i {
+  font-size: 1.6rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.15rem;
+  color: var(--muted);
+}
+
+.feature-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.section-gap {
+  padding: 4.5rem 0;
+}
+
+.section-dark {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* --- PROMO CARDS SYSTEM --- */
+.promo-card {
+  padding: 2rem;
+  border-radius: 24px;
+  height: 100%;
+  transition: transform 0.3s;
+}
+.promo-card:hover {
+  transform: translateY(-5px);
+}
+
+.promo-orange {
+  background: #faece7;
+  color: #993c1d;
+}
+.promo-orange .promo-sub {
+  color: #d85a30;
+}
+
+.promo-green {
+  background: #eaf3de;
+  color: #3b6d11;
+}
+.promo-green .promo-sub {
+  color: #639922;
+}
+
+.promo-blue {
+  background: #e6f1fb;
+  color: #185fa5;
+}
+.promo-blue .promo-sub {
+  color: #378add;
+}
+
+.promo-dark {
+  background: #1a1a1a;
+  color: #fff;
+  border: 1px solid #333;
+}
+.promo-dark .promo-sub {
+  color: #888;
+}
+
+/* --- PRODUCT CARD STYLES --- */
+.product-card {
+  height: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(216, 90, 48, 0.1);
+}
+
+.product-img-wrapper {
+  padding: 1rem;
+  transition: background 0.3s;
+}
+
+/* Pastel Backgrounds for Product Image Section */
+.card-sale .product-img-wrapper {
+  background-color: #faece7;
+}
+.card-new .product-img-wrapper {
+  background-color: #e6f1fb;
+}
+.card-hot .product-img-wrapper {
+  background-color: #eaf3de;
+}
+.card-neutral .product-img-wrapper {
+  background-color: #f1efe8;
+}
+
+.product-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  z-index: 2;
+}
+
+.badge-sale {
+  background-color: #d85a30;
+}
+.badge-new {
+  background-color: #639922;
+}
+.badge-hot {
+  background-color: #e24b4a;
+}
+
+.product-card .btn-outline-light {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  color: #212121;
+}
+.section-dark .product-card .btn-outline-light {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  color: #212121;
+}
+
+.product-card .card-img-top {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease; /* Thêm transition cho ảnh */
+}
+
+.product-card:hover .card-img-top {
+  transform: scale(1.05); /* Phóng to ảnh nhẹ */
+  filter: brightness(1.1); /* Sáng ảnh hơn */
+}
+
+.product-card .card-body {
+  padding: 1.25rem;
+}
+
+.product-card .btn-outline-light {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  color: #212121;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+}
+
+.product-card .btn-outline-light:hover {
+  background: var(--accent-2);
+  border-color: var(--accent-2);
+  color: #fff !important;
+  transform: scale(1.05);
+}
+
+.product-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(4, 8, 18, 0.86);
+  color: #fff;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(0, 230, 118, 0.25);
+}
+
+.price {
+  color: #fff;
+  font-weight: 700;
+}
+
+.sale-badge {
+  background: linear-gradient(135deg, var(--sale), var(--sale-2));
+  color: #fff;
+  border: 0;
+}
+
+.product-card .price {
+  color: var(--accent);
+}
+.hero-section {
+  padding-top: 3rem;
+}
+
+.slider-shell,
+.hero-slider {
+  min-height: 420px;
+}
+
+.lookbook-grid img {
+  height: 180px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 1rem 1.05rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 767.98px) {
+  .contact-card .contact-list {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card .contact-item {
+    padding: 0.95rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .section-gap {
+    padding: 3.5rem 0;
+  }
+
+  .lookbook-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-actions .btn {
+    width: 100%;
+  }
+}

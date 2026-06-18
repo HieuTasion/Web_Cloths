@@ -1,0 +1,126 @@
+.admin-page {
+  background:
+    radial-gradient(circle at top left, rgba(0, 183, 255, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(0, 230, 118, 0.10), transparent 24%),
+    linear-gradient(180deg, #06101c 0%, #0a1524 100%);
+}
+
+.admin-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  backdrop-filter: blur(16px);
+}
+
+.admin-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 290px minmax(0, 1fr);
+}
+
+.admin-sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 1.5rem;
+  border-right: 1px solid var(--border);
+  background: rgba(3, 8, 16, 0.92);
+  backdrop-filter: blur(18px);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 1030;
+}
+
+.admin-sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.admin-sidebar .nav-link {
+  color: rgba(255, 255, 255, 0.74);
+  border-radius: 16px;
+  padding: 0.9rem 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.admin-sidebar .nav-link:hover,
+.admin-sidebar .nav-link.active {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.admin-content {
+  min-width: 0;
+  min-height: 100vh;
+}
+
+.admin-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.42);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 1025;
+}
+
+.admin-thumb {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+
+.admin-hero {
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(0, 183, 255, 0.08), rgba(0, 230, 118, 0.05)),
+    rgba(255, 255, 255, 0.04);
+}
+
+.admin-shell.sidebar-open .admin-backdrop {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mini-stat {
+  border-radius: 22px;
+  padding: 1rem 1.1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.sale-badge {
+  background: linear-gradient(135deg, var(--sale), var(--sale-2));
+  color: #fff;
+}
+
+.admin-shell .table {
+  margin-bottom: 0;
+}
+
+@media (max-width: 991.98px) {
+  .admin-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: min(84vw, 320px);
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    box-shadow: var(--shadow);
+  }
+
+  .admin-shell.sidebar-open .admin-sidebar {
+    transform: translateX(0);
+  }
+}

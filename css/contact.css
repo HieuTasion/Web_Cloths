@@ -1,0 +1,59 @@
+.contact-page {
+  /* Thay đổi nền chính thành màu trắng xám sáng */
+  background: #f8f9fa !important;
+  color: #212529 !important;
+  min-height: 100vh;
+}
+
+.contact-wrap {
+  padding: 6rem 0 5rem;
+}
+
+.text-accent {
+  color: var(--accent-2, #00b7ff);
+}
+
+.btn-accent {
+  background: var(--accent-2, #00b7ff);
+  color: #000;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-accent:hover {
+  background: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 183, 255, 0.3);
+}
+
+.contact-info-card,
+.contact-form-card {
+ 
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  color: #212529 !important;
+}
+
+
+/* Đảm bảo các đoạn văn bản phụ có màu đủ đậm để đọc được */
+.contact-page .text-white-50 {
+  color: #6c757d !important;
+}
+
+.map-container {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  filter: grayscale(1) invert(0.9) contrast(1.2); /* Làm map trông futuristic hơn */
+  transition: 0.5s;
+}
+
+.map-container:hover {
+  filter: none;
+}
+
+@media (max-width: 991.98px) {
+  .contact-wrap {
+    padding-top: 6rem;
+  }
+}

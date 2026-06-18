@@ -1,0 +1,11 @@
+.auth-wrap {
+  padding: 3rem 0 4rem;
+}
+
+/* Các style riêng cho form đăng nhập/đăng ký có thể thêm ở đây */
+
+@media (max-width: 767.98px) {
+  .auth-wrap {
+    padding: 2rem 0 3rem;
+  }
+}

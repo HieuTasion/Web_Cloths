@@ -1,0 +1,42 @@
+.brand-page {
+  background-color: var(--bg);
+  min-height: 100vh;
+  background: #fff;
+}
+
+.brands-wrap {
+  min-height: 70vh;
+}
+
+#brandTitle {
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #1a1a1a !important;
+}
+
+/* Tinh chỉnh Filter Card cho nền sáng (Glassmorphism sáng) */
+.brand-page .filter-card {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+  color: #1a1a1a !important;
+}
+
+.brand-page .filter-title {
+  color: #ff8a00 !important;
+}
+
+.brand-page .filter-chip {
+  background: #f8f9fa !important;
+  color: #1a1a1a !important;
+  border: 1px solid #dee2e6 !important;
+}
+
+.filter-card .form-select,
+.filter-card .form-control {
+  background-color: #f8f9fa ;
+  color: #1a1a1a ;
+  border: 1px solid #dee2e6 ;
+}

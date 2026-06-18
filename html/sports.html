@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SportX | Môn thể thao</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/products.css" />
+    <link rel="stylesheet" href="../css/sports.css" />
+    <link rel="stylesheet" href="../css/search.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg navbar-dark container py-3">
+        <a class="navbar-brand fw-bold fs-3" href="./index.html">
+          <i class="fa-solid fa-basketball me-2"></i>SportX
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Trang chủ</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active"
+                href="./sports.html"
+                id="sportsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Môn thể thao
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="sportsDropdown">
+                <li>
+                  <a class="dropdown-item" href="./sports.html?sport=Chạy bộ"
+                    >Chạy bộ</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./sports.html?sport=Bóng rổ"
+                    >Bóng rổ</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./sports.html?sport=Cầu lông"
+                    >Cầu lông</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./sports.html?sport=Bóng đá"
+                    >Bóng đá</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="brandDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Thương hiệu
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="brandDropdown">
+                  <li><a class="dropdown-item" href="./brands.html?brand=Li-Ning">Li-Ning</a></li>
+                  <li><a class="dropdown-item" href="./brands.html?brand=361º">361º</a></li>
+                  <li><a class="dropdown-item" href="./brands.html?brand=adidas">adidas</a></li>
+                </ul>
+              </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./products.html">Bộ sưu tập</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Liên hệ</a>
+            </li>
+            <li class="nav-item">
+              <div class="search-container mx-lg-3">
+                <div class="input-group input-group-sm">
+                  <span
+                    class="input-group-text bg-dark border-secondary border-end-0 text-white-50"
+                    ><i class="fa-solid fa-magnifying-glass"></i
+                  ></span>
+                  <input
+                    type="text"
+                    id="navSearchInput"
+                    class="form-control bg-dark border-secondary border-start-0 text-white"
+                    placeholder="Tìm sản phẩm..."
+                    autocomplete="off"
+                  />
+                </div>
+                <div
+                  id="navSearchResults"
+                  class="search-results-dropdown d-none"
+                ></div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="./cart.html">
+                <i class="fa-solid fa-cart-shopping"></i
+                ><span id="cartCount" class="cart-badge">0</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="btn btn-outline-light rounded-pill px-4"
+                href="./login.html"
+                >Đăng nhập</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="sports-wrap py-5">
+      <div class="container">
+        <nav aria-label="breadcrumb" class="mb-4">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./index.html">Trang chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Môn thể thao</li>
+          </ol>
+        </nav>
+
+        <div class="row g-4">
+          <!-- Sidebar Bộ lọc -->
+          <aside class="col-lg-3">
+            <div class="glass-card filter-card p-4">
+              <div class="filter-section">
+                <div class="filter-title">Tìm kiếm</div>
+                <input
+                  id="productSearch"
+                  type="search"
+                  class="form-control form-control-lg"
+                  placeholder="Tìm trong môn này..."
+                />
+              </div>
+
+              <div class="filter-section">
+                <div class="filter-title">Giới tính</div>
+                <div class="d-grid gap-2">
+                  <label class="filter-chip">
+                    <input
+                      class="form-check-input me-2"
+                      type="checkbox"
+                      value="Nam"
+                      data-filter="gender"
+                    />Nam
+                  </label>
+                  <label class="filter-chip">
+                    <input
+                      class="form-check-input me-2"
+                      type="checkbox"
+                      value="Nữ"
+                      data-filter="gender"
+                    />Nữ
+                  </label>
+                  <label class="filter-chip">
+                    <input
+                      class="form-check-input me-2"
+                      type="checkbox"
+                      value="Unisex"
+                      data-filter="gender"
+                    />Unisex
+                  </label>
+                </div>
+              </div>
+
+              <div class="filter-section">
+                <div class="filter-title">Độ tuổi</div>
+                <div class="d-grid gap-2">
+                  <label class="filter-chip">
+                    <input
+                      class="form-check-input me-2"
+                      type="checkbox"
+                      value="Người lớn"
+                      data-filter="target"
+                    />Người lớn
+                  </label>
+                  <label class="filter-chip">
+                    <input
+                      class="form-check-input me-2"
+                      type="checkbox"
+                      value="Trẻ em"
+                      data-filter="target"
+                    />Trẻ em
+                  </label>
+                </div>
+              </div>
+
+              <div class="filter-section">
+                <div class="filter-title">Mức giá (VNĐ)</div>
+                <div class="d-grid gap-2">
+                  <label class="filter-chip">
+                    <input
+                      class="form-check-input me-2"
+                      type="checkbox"
+                      value="under-500"
+                      data-filter="price"
+                    />Dưới 500k
+                  </label>
+                  <label class="filter-chip">
+                    <input
+                      class="form-check-input me-2"
+                      type="checkbox"
+                      value="500-1000"
+                      data-filter="price"
+                    />500k - 1tr
+                  </label>
+                  <label class="filter-chip">
+                    <input
+                      class="form-check-input me-2"
+                      type="checkbox"
+                      value="above-1000"
+                      data-filter="price"
+                    />Trên 1tr
+                  </label>
+                </div>
+              </div>
+
+              <div class="filter-section mt-4">
+                <div class="filter-title">Sắp xếp</div>
+                <select
+                  id="sortProducts"
+                  class="form-select bg-dark text-white rounded-pill px-3"
+                >
+                  <option value="default">Mặc định</option>
+                  <option value="price-asc">Giá: Thấp đến Cao</option>
+                  <option value="price-desc">Giá: Cao đến Thấp</option>
+                </select>
+              </div>
+
+              <button
+                id="clearFilters"
+                class="btn btn-outline-light rounded-pill w-100 mt-4"
+              >
+                Đặt lại bộ lọc
+              </button>
+            </div>
+          </aside>
+
+          <!-- Danh sách sản phẩm -->
+          <div class="col-lg-9">
+            <div id="sportProductsSection" class="mt-2">
+              <div class="mb-5">
+                <h2
+                  id="selectedSportTitle"
+                  class="h3 mb-0 border-start border-4 border-accent ps-3"
+                  style="color: #00000098 !important"
+                >
+                  Chọn môn thể thao
+                </h2>
+              </div>
+              <div class="row g-4" id="sportProductsGrid"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="contact" class="custom-footer py-5 text-white">
+      <div class="container">
+        <div class="row align-items-stretch g-5">
+          <div
+            class="col-12 col-md-6 d-flex flex-column justify-content-center"
+          >
+            <h5
+              class="text-uppercase fw-bold footer-title mb-4"
+              style="color: var(--accent-2)"
+            >
+              Liên Hệ với chúng tôi
+            </h5>
+
+            <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+              <li class="contact-item d-flex align-items-center">
+                <div class="icon-box text-accent me-3">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <span
+                    class="d-block text-white-50 small text-uppercase fw-semibold"
+                    >Địa chỉ</span
+                  >
+                  <a
+                    href="https://maps.google.com/?q=140+Lê+Trọng+Tấn,+Tây+Thạnh,+Tân+Phú,+Hồ+Chí+Minh"
+                    target="_blank"
+                    class="contact-link"
+                  >
+                    140 Lê Trọng Tấn, Q.Tân Phú, TP.HCM
+                  </a>
+                </div>
+              </li>
+
+              <li class="contact-item d-flex align-items-center">
+                <div class="icon-box text-accent me-3">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <span
+                    class="d-block text-white-50 small text-uppercase fw-semibold"
+                    >Email</span
+                  >
+                  <a href="mailto:SinhVien@huit.edu.vn" class="contact-link"
+                    >SinhVien@huit.edu.vn</a
+                  >
+                </div>
+              </li>
+
+              <li class="contact-item d-flex align-items-center">
+                <div class="icon-box text-accent me-3">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <span
+                    class="d-block text-white-50 small text-uppercase fw-semibold"
+                    >Số điện thoại</span
+                  >
+                  <a href="tel:0329405678" class="contact-link">0329 405 678</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <h5
+              class="text-uppercase fw-bold footer-title mb-4"
+              style="color: var(--accent-2)"
+            >
+              Vị trí Bản đồ
+            </h5>
+
+           <iframe
+              src="https://maps.google.com/maps?q=140%20Lê%20Trọng%20Tấn,%20Q.Tân%20Phú,%20TP.HCM&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="240"
+              style="
+                border: none;
+                border-radius: 12px;
+                background-color: white;
+                display: block;
+              "
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4 text-white-50 small">
+        <p class="mb-2 footer-copyright-text">
+          &copy; 2024 SportX. Bản quyền thuộc về Sinh Viên HUIT.
+        </p>
+        <div class="footer-social mt-2">
+          <a href="#" class="contact-link" aria-label="Facebook">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="#" class="contact-link" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="#" class="contact-link" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="../js/cart-store.js"></script>
+    <script src="../js/catalog.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/sports.js"></script>
+  </body>
+</html>

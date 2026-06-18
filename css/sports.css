@@ -1,0 +1,14 @@
+/* File này hiện tại chỉ chứa các tùy chỉnh riêng cho trang sản phẩm theo môn thể thao */
+.sports-wrap {
+  min-height: 60vh;
+  background-color: var(--bg);
+}
+
+.sport-name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  
+  margin-bottom: 0.5rem;
+  color: #212121;
+  text-transform: uppercase;
+}

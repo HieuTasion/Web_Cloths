@@ -1,0 +1,175 @@
+.products-wrap {
+  padding: 3rem 0 4rem;
+  background-color: var(--bg);
+}
+
+.product-card {
+  height: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(216, 90, 48, 0.1);
+}
+
+.product-card .card-img-top {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.product-card:hover .card-img-top {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Đồng bộ phần wrapper ảnh với trang chủ */
+.product-img-wrapper {
+  padding: 1rem;
+  position: relative;
+  transition: background 0.3s;
+}
+
+/* Pastel Backgrounds dựa trên class được JS add vào */
+.card-sale .product-img-wrapper {
+  background-color: #faece7;
+}
+.card-new .product-img-wrapper {
+  background-color: #e6f1fb;
+}
+.card-hot .product-img-wrapper {
+  background-color: #eaf3de;
+}
+.card-neutral .product-img-wrapper {
+  background-color: #f1efe8;
+}
+
+.product-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  z-index: 2;
+}
+
+.product-card .card-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-start;
+}
+
+.product-card .product-name {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 3rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #212121;
+}
+
+.product-card .rating {
+  font-size: 0.85rem;
+  color: #ffd45b;
+  margin-bottom: 0.5rem;
+}
+
+.product-card .price-wrapper {
+  margin-top: auto;
+  margin-bottom: 1rem;
+}
+
+.product-card .btn-outline-light {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  color: #212121;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+}
+
+.product-card .btn-outline-light:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff !important;
+  transform: scale(1.05);
+}
+
+.filter-section {
+  margin-bottom: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 1rem 1.05rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.filter-title {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--accent-2);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Làm cho Filter Card giống Card ở Index */
+.filter-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.03)
+  ) !important;
+  border: 1px solid var(--border) !important;
+  backdrop-filter: blur(12px);
+}
+
+.filter-chip {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.25rem; /* Tăng padding để thẻ filter lớn hơn */
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-chip:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent-2);
+}
+
+@media (max-width: 767.98px) {
+  .products-wrap {
+    padding: 2rem 0 3rem;
+  }
+}
