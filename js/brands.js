@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <div class="card-body d-flex flex-column">
               <div class="mb-2">
-                <span class="text-uppercase small text-accent fw-semibold d-block mb-1">${product.category}</span>
+                <span class="text-uppercase small text-accent fw-semibold d-block mb-1">${product.brand} - ${product.category}</span>
                 <h3 class="h5 product-name mb-0">${product.name}</h3>
               </div>
               <div class="price-wrapper mt-auto mb-3">

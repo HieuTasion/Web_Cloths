@@ -64,7 +64,7 @@
       window.SportxCartStore.clearCartForEmail(user.email);
     }
 
-    // Đảm bảo xóa sạch bộ nhớ tạm của trình duyệt để không lây lan sang Guest
+ 
     if (typeof window !== "undefined") {
       window.name = "";
     }
@@ -140,7 +140,7 @@
       logoutBtn.dataset.bound = "1";
       logoutBtn.addEventListener("click", () => {
         clearAuth();
-        // Sau khi clear auth, nếu có giỏ hàng của khách thì cập nhật lại badge
+    
         if (window.SportxCartStore) {
           window.SportxCartStore.updateCartBadge?.();
         }
